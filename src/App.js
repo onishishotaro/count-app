@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import CountButton from "./CountButton";
 
 const App = () => {
-  const [num, setNum] = useState(0);
-  const onCountUp = () => {
-    setNum(num + 1);
-  };
-  const onCountDown = () => {
-    setNum(num - 1);
-  };
-
   return (
     <>
       <h1>カウントアプリ</h1>
-      <p>{num}</p>
-      <button onClick={onCountUp}>+1</button>
-      <button onClick={onCountDown}>-1</button>
+      <CountButton text="+1" num={1} />
+      <CountButton text="+2" num={2} />
+      <CountButton text="+3" num={3} />
+      <CountButton text="+4" num={4} />
+      <CountButton text="+5" num={5} />
     </>
   );
 };
